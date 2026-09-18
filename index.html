@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, BB!</title>
+
+  <!-- This script pulls in Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- These are for the animations and photo gallery -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-video.min.css" />
+
+  <!-- Google Fonts for the Anime look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Link to your new external CSS file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- IMPORTANT: Replace with a real image link after you upload it -->
+  <meta property="og:image" content="https://placehold.co/1200x630/87CEEB/FFFFFF?text=A+Surprise+For+[Name]">
+</head>
+<body>
+<!-- Canvas for the falling cherry blossoms -->
+<canvas id="sakura-canvas"></canvas>
+
+<!-- Section 1: Hero Welcome -->
+<header class="h-screen relative flex items-center justify-center text-white overflow-hidden">
+  <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+    <source src="img/sa.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+  <div class="text-center z-10 p-4" data-aos="fade-in" data-aos-duration="1500">
+    <h1 class="text-5xl md:text-7xl font-anime drop-shadow-lg">HAPPY BIRTHDAY!! MORRI!</h1>
+    <p class="mt-4 text-3xl font-semibold">Chúc mừng sinh nhật Bé Bảo Thúi</p>
+    <p class="mt-4 text-2xl font-semibold">16/09/2026</p>
+    <div id="countdown" class="mt-6 text-3xl md:text-5xl font-semibold tracking-widest leading-relaxed whitespace-nowrap"></div>  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto p-6 md:p-12">
+
+  <!-- Section 2: A Letter For You -->
+  <section class="my-16 md:my-24 max-w-3xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-5xl md:text-6xl font-anime text-sakura mb-8 drop-shadow-sm">SECRET (xem 1 mình nhó)</h2>
+    <div class="text-left text-lg leading-relaxed space-y-4 bg-white p-8 rounded-lg shadow-lg">
+      <!-- TODO: Write your personal letter here -->
+      <p>Chào anh yêu,</p>
+      <p>Lần thứ 3 mà mình đón sinh nhật cùng nhau, anh còn nhớ lần đầu 2 đứa mình ăn sinh nhật cùng nhau hong, lúc đó em thấy hồi hộp lắm, hong biết anh có thích món quà mà em chuẩn bị hay không, huhu, sợ lắm í. Nhưng mà lần này khác rùi nhé, em biết chắc dù thế nào, anh thương em nhất, chắc chắn sẽ thích thui, hihi.</p>
+      <p>Thêm tủi mới rùi, tụi mình đều phải lớn hơn, trưởng thành hơn, nhưng không vì thế mà đánh mất chính mình. Hãy cứ là anh và em nhưng ở phiên bản tốt hơn, yêu thương và đồng cảm cho nhau hơn anh nhé.</p>
+      <p>Nhân sinh nhật anh, em chúc anh thật nhiều sức khoẻ và hạnh phúc, em không cần anh thành công hay nhiều tiền, nhưng nhiều tiền mang lại hạnh phúc cho mình mà đúng hong anh. Chỉ mong anh vui vẻ, hạnh phúc và kiên định với những gì mình đã chọn.</p>
+      <p class="text-right mt-8">
+        Em yêu anh thật nhiều...<br>
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 3: The Timeline -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-6xl md:text-6xl font-anime text-center mb-12" data-aos="fade-up">BẢO BẢO CHUYỆN CHƯA KỂ</h2>
+    <div class="space-y-16">
+      <!-- Timeline Item 1 -->
+      <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+        <!-- TODO: Replace with your photo -->
+        <img src="img/A1.jpg" alt="Add photo 1" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white"> <!--replce img1.jpg with name of your img-->
+        <div class="text-center md:text-left">
+          <!-- TODO: Customize the date and story -->
+          <h3 class="text-3xl font-anime text-sakura">Ngày còn bé ti ti</h3>
+          <p class="mt-2 text-lg">Nhìn đáng yêu làm sao!! Thương lắm í, hồi này thoải mái anh ha, thích làm gì thì làm, thích chơi gì thì chơi. Lúc đó em cứ mong lớn thật nhanh, em sẽ kiếm nhiều tiền mua nhà cho bố mẹ, giờ càng lớn lại thấy giấc mơ càng xa...</p>
+            <br>
+        </div>
+      </div>
+      <!-- Timeline Item 2 -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+        <!-- TODO: Replace with your photo -->
+        <img src="img/A2.jpg" alt="Add photo 2" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="text-center md:text-right">
+          <!-- TODO: Customize the date and story -->
+          <h3 class="text-3xl font-anime text-sakura">Lớn hơn tí xíu</h3>
+          <p class="mt-2 text-lg">Hình này là lúc lên Sài Gòn rùi, nhưng mà em thấy dễ thương quá nên để luôn. Thật sự phải nói biết ơn mẹ Dung vô cùng luôn í. Sao mà nuôi ra được thằng nhỏ lanh lợi, đáng yêu vậy khum bíc. Em bị mê anh rùi hay sao ớ.</p>
+          <p class="mt-2 text-lg">Hồi còn được ở nhà với bố mẹ he, được iu thương quá trời lun, bé iu của mẹ Dung he. Cố gắng cho gia đình nhỏ của mình tốt hơn vậy nữa nhé.</p>
+
+            <br>
+        </div>
+      </div>
+      <!-- Timeline Item 3 (NEW) -->
+      <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+        <img src="img/A3.jpg" alt="Add photo 3" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="text-center md:text-left">
+          <h3 class="text-3xl font-anime text-sakura">Rời xa vòng tay gia đình</h3>
+          <p class="mt-2 text-lg">Đi học chưa bao lâu đã bị cuỗm mất tiu ời. Từ bé iu của mẹ Dung, giờ suốt ngày bị bắt nạt he.</p>
+          <p class="mt-2 text-lg">Thấy thương ghê á ^.^</p>
+         <br>
+        </div>
+      </div>
+      <!-- Timeline Item 4 (NEW) -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+        <img src="img/A4.jpg" alt="Add photo4" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="text-center md:text-right">
+          <h3 class="text-3xl font-anime text-sakura">Xây dựng thế giới mới</h3>
+          <p class="mt-2 text-lg">Mới 22 tuổi mấy ngày thui, hong có gì phải nặng lòng hết, tuổi mình còn trẻ, thanh niên sức dài vai rộng, mình cứ cố gắng hết sức thui ạ. Anh đừng làm khó bản thân nhé.</p>
+          <p class="mt-2 text-lg">Nhưng mà anh cũng đâu cần cố gắng một mình, em cũng cùng anh cố gắng. Hai tụi mình cùng nhau mua hết cái Sài Gòn này lun hé!</p>
+            <br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Your Favourite Photos of your loved Ones (NEW SECTION) -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-7xl font-anime text-center mb-12" data-aos="fade-up">Những khoảnh khắc điện ảnh của chúng ta!!</h2>
+    <div class="relative">
+      <!-- Scroll Buttons -->
+      <button id="scroll-left-btn" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <button id="scroll-right-btn" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </button>
+
+      <!-- Scrollable Container -->
+      <div id="hall-of-fame-scroller" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide p-4 -mx-4">
+        <div class="flex snap-x snap-mandatory gap-8">
+          <!--  Card 1 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/B1.jpg" alt="Photo 1" class="w-full h-80 object-cover rounded-md mb-4"> 
+              <h3 class="text-3xl font-anime text-sakura">Tết 2025</h3>
+              <p class="mt-2">"Cái Tết đầu tiên của hai đứa mình nè bé Bảo. Bộ này phải nói để đời lun á."</p>
+            </div>
+          </div>
+          <!--  Card 2 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/B2.jpg" alt="Photo 2" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-3xl font-anime text-sakura">Vũng Tàu</h3>
+              <p class="mt-2">"Còn đây là chuyến du lịt đầu tiên, em không ngủ cả đêm lun, anh chạy xe mệt xỉu lun. Huhu, thông cảm nhé."</p>
+            </div>
+          </div>
+          <!--  Card 3 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/B3.jpg" alt="Photo 3" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-3xl font-anime text-sakura">Đà Lạt</h3>
+              <p class="mt-2">"Xuống biến rùi lại lên núi. Em vẫn là mê Đà Lạt nhất! Không khí, khung cảnh, cả những kí ức đẹp của tụi mình nữa. Yêu quá!"</p>
+            </div>
+          </div>
+          <!--  Card 4 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/B4.jpg" alt="Photo 4" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-3xl font-anime text-sakura">Phước Hải</h3>
+              <p class="mt-2">"Đi biển típ cho mát. Ráng làm nhìu tiền đi dọc hết biển Việt Nam lun đi anh."</p>
+            </div>
+          </div>
+          <!--  Card 5 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/B5.jpg" alt="Photo 5" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-3xl font-anime text-sakura">Cánh đồng An Nhứt</h3>
+              <p class="mt-2">"Thấy em phối đồ chưa, đẹp quá à. Hình này đi làm poster phim được lun á."</p>
+            </div>
+          </div>
+          <!--  Card 6 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="500">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/B6.jpg" alt="Photo 6" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-3xl font-anime text-sakura">Bảo Lộc</h3>
+              <p class="mt-2">"Bảo Lộc không lạnh bằng Đà Lạt, nhưng em vẫn thích, mát mẻ dễ chịu :> Ai như cái Sài Gòn oi bức này."</p>
+            </div>
+          </div>
+          <!--  Card 7 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="500">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/B7.jpg" alt="Photo 7" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-3xl font-anime text-sakura">Tết 2026</h3>
+              <p class="mt-2">"Màu xanh lanh chanh, để em suy nghĩ coi Tết năm nay mình mặc màu gì đây! Hihi!!"</p>
+            </div>
+          </div>
+          <!-- Card 8 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/B8.jpg" alt="Photo 8" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-3xl font-anime text-sakura">Phan Thiết</h3>
+              <p class="mt-2">"Lần gần đây nhất nè. Lần này hiểu nhau hơn, nhưng đi lại nghỉ dưỡng nhìu hơn, chắc là già rùi!"</p>
+            </div>
+          </div>
+          <!-- Card 9 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/B9.jpg" alt="Photo 9" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-3xl font-anime text-sakura">Hoa Cỏ Lau</h3>
+              <p class="mt-2">"Hình ai chụp mà đẹp thí! Có hoa, có cỏ, có anh, có em. Quá đã!"</p>
+            </div>
+          </div>
+          <!-- Card 10 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/B10.jpg" alt="Photo 10" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-3xl font-anime text-sakura">Ga Ba Son</h3>
+              <p class="mt-2">"Hồi này cả nhà bự mình đi chơi Tết nè, anh nhớ hong!"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: The Gallery -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Xem kỉ niệm hong</h2>
+    <p class="text-center text-lg -mt-8 mb-12">(Thiệt là đang iu làm sao)</p>
+    <div id="lightgallery" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <a 
+        data-video='{"source": [{"src":"img/M1.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M1.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M2.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M2.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M3.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M3.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M4.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M4.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M5.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M5.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M6.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M6.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M7.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M7.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M8.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M8.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M9.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M9.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M10.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M10.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M11.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M11.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M12.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M12.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M13.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M13.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M14.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M14.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M15.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M15.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M16.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M16.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M17.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M17.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M18.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M18.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M19.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M19.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+      <a
+        data-video='{"source": [{"src":"img/M20.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "autoplay": true}}'
+        data-aos="zoom-in"
+        class="block w-full h-48 md:h-64"
+      >
+        <img src="img/M20.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Video kỷ niệm 1">
+      </a>
+    </div>
+  </section>
+
+    <!-- Section 6: Finale -->
+    <section class="my-16 md:my-24" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-anime text-center mb-4">Happy Birthday Bảo Bảo Thúi</h2>
+        <div class="max-w-4xl mx-auto rounded-lg shadow-2xl overflow-hidden bg-navy">
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-navy text-white p-8 text-center">
+  <p>Bé yêu của anh! Trần Hà Trang!!</p>
+  <p class="text-sm opacity-70 mt-2">16/09/2026</p>
+</footer>
+
+<!-- These scripts are for the animations and photo gallery -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/video/lg-video.min.js"></script>
+
+<!-- Link to your new external JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>
